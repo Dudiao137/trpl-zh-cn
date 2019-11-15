@@ -1,10 +1,6 @@
 ## 安装
 
-> [ch01-01-installation.md](https://github.com/rust-lang/book/blob/master/src/ch01-01-installation.md)
-> <br>
-> commit 1fedfc4b96c2017f64ecfcf41a0a07e2e815f24f
-
-第一步是安装 Rust。我们通过 `rustup` 下载 Rust，这是一个管理 Rust 版本和相关工具的命令行工具。下载时需要联网。
+第一步是安装 Rust。我们可以通过 `rustup` 下载 Rust，这是一个管理 Rust 版本和相关工具的命令行工具。下载时需要联网。
 
 > 注意：如果你出于某些理由倾向于不使用 `rustup`，请到 [Rust 安装页面](https://www.rust-lang.org/install.html) 查看其它安装选项。
 
@@ -80,13 +76,6 @@ $ rustc --version
 ```text
 rustc x.y.z (abcabcabc yyyy-mm-dd)
 ```
-
-如果出现这些内容，Rust 就安装成功了！如果并没有看到这些信息，并且使用的是 Windows，请检查 Rust 是否位于 `%PATH%` 系统变量中。如果一切正确但 Rust 仍不能使用，有许多地方可以求助。最简单的是 [irc.mozilla.org 上的 #rust IRC 频道][irc]<!-- ignore --> ，可以使用 [Mibbit][mibbit] 来访问它。然后就能和其他 Rustacean（Rust 用户的称号，有自嘲意味）聊天并寻求帮助。其它给力的资源包括[用户论坛][users]和 [Stack Overflow][stackoverflow]。
-
-[irc]: irc://irc.mozilla.org/#rust
-[mibbit]: http://chat.mibbit.com/?server=irc.mozilla.org&channel=%23rust
-[users]: https://users.rust-lang.org/
-[stackoverflow]: http://stackoverflow.com/questions/tagged/rust
 
 > 译者：恭喜入坑！（此处应该有掌声！）
 

@@ -1,12 +1,8 @@
 ## Hello, Cargo!
 
-> [ch01-03-hello-cargo.md](https://github.com/rust-lang/book/blob/master/src/ch01-03-hello-cargo.md)
-> <br>
-> commit 7ccf60ad3b85e06ad0a2cb7c422dc80c42ecc963
+Cargo 是 Rust 的构建工具和包管理器。大多数 Rustacean 们使用 Cargo 来管理 Rust 项目，因为它可以处理很多任务，比如构建代码、下载依赖库并编译依赖库。（代码所需要的库叫做 **依赖**（*dependencies*））。
 
-Cargo 是 Rust 的构建系统和包管理器。大多数 Rustacean 们使用 Cargo 来管理他们的 Rust 项目，因为它可以为你处理很多任务，比如构建代码、下载依赖库并编译这些库。（我们把代码所需要的库叫做 **依赖**（*dependencies*））。
-
-最简单的 Rust 程序，比如我们刚刚编写的，没有任何依赖。所以如果使用 Cargo 来构建 Hello, world! 项目，将只会用到 Cargo 构建代码的那部分功能。在编写更复杂的Rust程序时，你将添加依赖项，如果使用Cargo启动项目，则添加依赖项将更容易。
+简单的 Rust 程序，比如我们刚刚编写的，是没有任何依赖。所以如果使用 Cargo 来构建 Hello, world! 项目，将只会用到 Cargo 构建代码的那部分功能。在编写更复杂的Rust程序时，你将添加依赖项，如果使用Cargo启动项目，则添加依赖项将更容易。
 
 由于绝大多数 Rust 项目使用 Cargo，本书接下来的部分假设你也使用 Cargo。如果使用 “安装” 部分介绍的官方安装包的话，则自带了 Cargo。如果通过其他方式安装的话，可以在终端输入如下命令检查是否安装了 Cargo：
 
@@ -14,7 +10,7 @@ Cargo 是 Rust 的构建系统和包管理器。大多数 Rustacean 们使用 Ca
 $ cargo --version
 ```
 
-如果你看到了版本号，说明已安装！如果看到类似 `command not found` 的错误，你应该查看相应安装文档以确定如何单独安装 Cargo。
+如果你看到了版本号，说明已安装，如果看到类似 `command not found` 的错误，你应该查看相应安装文档以确定如何单独安装 Cargo。
 
 ### 使用 Cargo 创建项目
 
@@ -47,15 +43,13 @@ edition = "2018"
 
 <span class="caption">示例 1-2: *cargo new* 命令生成的 *Cargo.toml* 的内容</span>
 
-这个文件使用 [*TOML*][toml]<!-- ignore --> (*Tom's Obvious, Minimal Language*) 格式，这是 Cargo 配置文件的格式。
+这个文件使用 [*TOML*][https://github.com/toml-lang/toml]  (*Tom's Obvious, Minimal Language*) 格式，这是 Cargo 配置文件的格式。
 
-[toml]: https://github.com/toml-lang/toml
-
-第一行，`[package]`，是一个片段（section）标题，表明下面的语句用来配置一个包。随着我们在这个文件增加更多的信息，还将增加其他片段（section）。
+第一行，`[package]`，是一个片段（section）标题，表明下面的语句用来配置一个包。随着我们在这个文件中增加更多的信息，还将增加其他片段（section）。
 
 接下来的四行设置了 Cargo 编译程序所需的配置：项目的名称、版本、作者以及要使用的Rust版本。Cargo 从环境中获取你的名字和 email 信息，所以如果这些信息不正确，请修改并保存此文件。附录 E 会介绍 `edition` 的值。
 
-最后一行，`[dependencies]`，是罗列项目依赖的片段的开始。在 Rust 中，代码包被称为 *crates*。这个项目并不需要其他的 crate，不过在第二章的第一个项目会用到依赖，那时会用得上这个片段。
+最后一行，`[dependencies]`，是罗列项目依赖的开始。在 Rust 中，代码包被称为 *crates*。这个项目并不需要其他的 crate，不过在第二章的第一个项目会用到依赖，那时会用得上这个片段。
 
 现在打开 *src/main.rs* 看看：
 
@@ -67,7 +61,7 @@ fn main() {
 }
 ```
 
-Cargo 为你生成了一个 Hello World! 程序，正如我们之前编写的示例 1-1！目前为止，之前项目与 Cargo 生成项目的区别是 Cargo 将代码放在 *src* 目录，同时项目根目录包含一个 *Cargo.toml* 配置文件。
+Cargo 为你生成了一个 Hello World! 程序，正如我们之前编写的示例 1-1。目前为止，之前项目与 Cargo 生成项目的区别是 Cargo 将代码放在 *src* 目录，同时项目根目录包含一个 *Cargo.toml* 配置文件。
 
 Cargo 期望源文件存放在 *src* 目录中。项目根目录只存放 README、license 信息、配置文件和其他跟代码无关的文件。使用 Cargo 帮助你保持项目干净整洁，一切井井有条。
 
@@ -145,9 +139,7 @@ $ cd someproject
 $ cargo build
 ```
 
-关于更多 Cargo 的信息，请查阅 [其文档][its documentation]。
-
-[its documentation]: https://doc.rust-lang.org/cargo/
+关于更多 Cargo 的信息，请查阅 [其文档][https://doc.rust-lang.org/cargo/]。
 
 ## 总结
 

@@ -1,20 +1,10 @@
 # 介绍
 
-> [ch00-00-introduction.md](https://github.com/rust-lang/book/blob/master/src/ch00-00-introduction.md)
-> <br>
-> commit 0aa307c7d79d2cbf83cdf5d47780b2904e9cb03f
-
-> 注意：本书的版本与出版的 [The Rust Programming Language][nsprust] 
-> 和电子版的 [No Starch Press][nsp] 一致
-
-[nsprust]: https://nostarch.com/rust
-[nsp]: https://nostarch.com/
-
-欢迎阅读 “Rust 程序设计语言”，一本介绍 Rust 的书。Rust 程序设计语言能帮助你编写更快、更可靠的软件。在编程语言设计中，高层工程学和底层控制往往不能兼得；Rust 则试图挑战这一矛盾。通过权衡强大的技术能力与优秀的开发体验，Rust 允许你控制底层细节（比如内存使用），并免受以往进行此类控制所经受的所有烦恼。
+欢迎阅读 “Rust 程序设计语言”，一本介绍 Rust 的书。Rust 程序设计语言能帮助你编写更快、更可靠的软件。在编程语言设计中，高层工程学( High-level ergonomics )和底层控制( low-level control )往往不能兼得；Rust 则试图挑战这一矛盾。 Through balancing powerful technical capacity and a great developer experience ，Rust 允许你可以控制底层细节（比如内存使用），而不必承受以往进行此类处理时所经受的各种烦恼。
 
 ## 谁会使用 Rust
 
-Rust 因多种原因适用于很多开发者。让我们讨论几个最重要的群体。
+Rust 适用于很多开发者。让我们讨论几个最重要的群体。
 
 ### 开发者团队
 
@@ -48,7 +38,7 @@ Rust 语言也希望能支持很多其他用户，这里提及的只是最大的
 
 ## 本书是写给谁的
 
-本书假设你已经使用其他编程语言编写过代码，但并不假设你使用的是何种语言。我们尝试使这些材料能广泛的适用于来自很多不同编程背景的开发者。我们不会花费很多时间讨论编程 **是** 什么或者如何理解它。如果编程对于你来说是完全陌生的，你最好先阅读专门介绍编程的书籍。
+本书假设你已经使用其他编程语言编写过代码，但并不假设你使用的是何种语言。我们尝试使这些材料能广泛的适用于来自很多不同编程背景的开发者。我们不会花费很多时间讨论编程是什么或者如何理解它。如果编程对于你来说是完全陌生的，你最好先阅读专门介绍编程的书籍。
 
 ## 如何阅读本书
 
@@ -76,16 +66,14 @@ Rust 语言也希望能支持很多其他用户，这里提及的只是最大的
 
 怎样阅读本书都不会有任何问题：如果你希望略过一些内容，请继续！如果你发现疑惑可能会再跳回之前的章节。请随意阅读。
 
-<span id="ferris"></span>
-
 学习 Rust 的过程中一个重要的部分是学习如何阅读编译器提供的错误信息：它们会指导你编写出能工作的代码。为此，我们会提供很多不能编译的示例代码，以及各个情况下编译器会展示的错误信息。请注意如果随便输入并运行随机的示例代码，它们可能无法编译！请确保阅读任何你尝试运行的示例周围的内容，检视他们是否有意写错。Ferris 也会帮助你区别那些有意无法工作的代码：
 
-| Ferris                                                                 | 意义                                          |
-|------------------------------------------------------------------------|--------------------------------------------------|
-| <img src="img/ferris/does_not_compile.svg" class="ferris-explain">     | 这些代码不能编译！                      |
-| <img src="img/ferris/panics.svg" class="ferris-explain">               | 这些代码会 panic！                                |
-| <img src="img/ferris/unsafe.svg" class="ferris-explain">               | 这些代码块包含不安全（unsafe）代码。            |
-| <img src="img/ferris/not_desired_behavior.svg" class="ferris-explain"> | 这些代码不会产生期望的行为。 |
+| Ferris                                                       | 意义                                 |
+| ------------------------------------------------------------ | ------------------------------------ |
+| <img src="img/ferris/does_not_compile.svg" class="ferris-explain" style="zoom: 25%;" > | 这些代码不能编译！                   |
+| <img src="img/ferris/panics.svg" class="ferris-explain" style="zoom:25%;" > | 这些代码会 panic！                   |
+| <img src="img/ferris/unsafe.svg" class="ferris-explain" style="zoom:25%;" > | 这些代码块包含不安全（unsafe）代码。 |
+| <img src="img/ferris/not_desired_behavior.svg" class="ferris-explain" style="zoom:25%;" > | 这些代码不会产生期望的行为。         |
 
 在大部分情况，我们会指引你将任何不能编译的代码纠正为正确版本。
 
