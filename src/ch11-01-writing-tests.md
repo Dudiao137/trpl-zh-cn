@@ -2,7 +2,6 @@
 
 > [ch11-01-writing-tests.md](https://github.com/rust-lang/book/blob/master/src/ch11-01-writing-tests.md)
 > <br>
-> commit 820ac357f6cf0e866e5a8e7a9c57dd3e17e9f8ca
 
 Rust 中的测试函数是用来验证非测试代码是否按照期望的方式运行的。测试函数体通常执行如下三种操作：
 
@@ -77,9 +76,8 @@ Cargo 编译并运行了测试。在 `Compiling`、`Finished` 和 `Running` 这�
 
 因为之前我们并没有将任何测试标记为忽略，所以摘要中会显示 `0 ignored`。我们也没有过滤需要运行的测试，所以摘要中会显示`0 filtered out`。在下一部分 “控制测试如何运行” 会讨论忽略和过滤测试。
 
-`0 measured` 统计是针对性能测试的。性能测试（benchmark tests）在编写本书时，仍只能用于 Rust 开发版（nightly Rust）。请查看 [性能测试的文档][bench] 了解更多。
+`0 measured` 统计是针对性能测试的。性能测试（benchmark tests）在编写本书时，仍只能用于 Rust 开发版（nightly Rust）。请查看 [性能测试的文档][https://doc.rust-lang.org/unstable-book/library-features/test.html] 了解更多。
 
-[bench]: https://doc.rust-lang.org/unstable-book/library-features/test.html
 
 测试输出的中以 `Doc-tests adder` 开头的这一部分是所有文档测试的结果。我们现在并没有任何文档测试，不过 Rust 会编译任何在 API 文档中的代码示例。这个功能帮助我们使文档和代码保持同步！在第十四章的 “文档注释” 部分会讲到如何编写文档测试。现在我们将忽略 `Doc-tests` 部分的输出。
 

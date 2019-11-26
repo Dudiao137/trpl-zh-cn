@@ -2,7 +2,6 @@
 
 > [ch08-02-strings.md](https://github.com/rust-lang/book/blob/master/src/ch08-02-strings.md)
 > <br>
-> commit a86c1d315789b3ca13b20d50ad5005c62bdd9e37
 
 第四章已经讲过一些字符串的内容，不过现在让我们更深入地了解它。字符串是新晋 Rustacean 们通常会被困住的领域，这是由于三方面理由的结合：Rust 倾向于确保暴露出可能的错误，字符串是比很多程序员所想象的要更为复杂的数据结构，以及 UTF-8。所有这些要素结合起来对于来自其他语言背景的程序员就可能显得很困难了。
 

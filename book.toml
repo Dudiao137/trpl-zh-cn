@@ -11,4 +11,4 @@ additional-css = ["ferris.css"]
 additional-js = ["ferris.js"]
 
 [output.epub]
-additional-css = ["ferris.css"]
+additional-css = ["/home/otswang/workplace/book/rust-program-language-cn/ferris.css"]

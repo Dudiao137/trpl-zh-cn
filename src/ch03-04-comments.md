@@ -2,7 +2,6 @@
 
 > [ch03-04-comments.md](https://github.com/rust-lang/book/blob/master/src/ch03-04-comments.md)
 > <br>
-> commit a86c1d315789b3ca13b20d50ad5005c62bdd9e37
 
 所有程序员都力求使其代码易于理解，不过有时还需要提供额外的解释。在这种情况下，程序员在源码中留下记录，或者 **注释**（*comments*），编译器会忽略它们，不过阅读代码的人可能觉得有用。
 

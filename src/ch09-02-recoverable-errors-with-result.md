@@ -2,13 +2,11 @@
 
 > [ch09-02-recoverable-errors-with-result.md](https://github.com/rust-lang/book/blob/master/src/ch09-02-recoverable-errors-with-result.md)
 > <br>
-> commit db53e2e3cdf77beac853df6f29db4b3b86ea598c
+
 
 大部分错误并没有严重到需要程序完全停止执行。有时，一个函数会因为一个容易理解并做出反应的原因失败。例如，如果尝试打开一个文件不过由于文件并不存在而失败，此时我们可能想要创建这个文件而不是终止进程。
 
 回忆一下第二章 “使用 `Result` 类型来处理潜在的错误” 部分中的那个 `Result` 枚举，它定义有如下两个成员，`Ok` 和 `Err`：
-
-[handle_failure]: ch02-00-guessing-game-tutorial.html#handling-potential-failure-with-the-result-type
 
 ```rust
 enum Result<T, E> {
@@ -33,7 +31,7 @@ fn main() {
 
 <span class="caption">示例 9-3：打开文件</span>
 
-如何知道 `File::open` 返回一个 `Result` 呢？我们可以查看 [标准库 API 文档](https://doc.rust-lang.org/std/index.html)<!-- ignore -->，或者可以直接问编译器！如果给 `f` 某个我们知道 **不是** 函数返回值类型的类型注解，接着尝试编译代码，编译器会告诉我们类型不匹配。然后错误信息会告诉我们 `f` 的类型 **应该** 是什么。让我们试试！我们知道 `File::open` 的返回值不是 `u32` 类型的，所以将 `let f` 语句改为如下：
+如何知道 `File::open` 返回一个 `Result` 呢？我们可以查看 [标准库 API 文档](https://doc.rust-lang.org/std/index.html)，或者可以直接问编译器！如果给 `f` 某个我们知道 **不是** 函数返回值类型的类型注解，接着尝试编译代码，编译器会告诉我们类型不匹配。然后错误信息会告诉我们 `f` 的类型 **应该** 是什么。让我们试试！我们知道 `File::open` 的返回值不是 `u32` 类型的，所以将 `let f` 语句改为如下：
 
 ```rust,ignore
 let f: u32 = File::open("hello.txt");
@@ -63,7 +61,7 @@ error[E0308]: mismatched types
 
 <span class="filename">文件名: src/main.rs</span>
 
-```rust,should_panic
+```rust
 use std::fs::File;
 
 fn main() {
@@ -99,10 +97,7 @@ Os { code: 2, message: "No such file or directory" } }', src/main.rs:9:12
 
 <span class="filename">文件名: src/main.rs</span>
 
-<!-- ignore this test because otherwise it creates hello.txt which causes other
-tests to fail lol -->
-
-```rust,ignore
+```rust
 use std::fs::File;
 use std::io::ErrorKind;
 
@@ -130,7 +125,7 @@ fn main() {
 
 这里有好多 `match`！`match` 确实很强大，不过也非常的基础。第十三章我们会介绍闭包（closure）。`Result<T, E>` 有很多接受闭包的方法，并采用 `match` 表达式实现。一个更老练的 Rustacean 可能会这么写：
 
-```rust,ignore
+```rust
 use std::fs::File;
 use std::io::ErrorKind;
 
@@ -155,7 +150,7 @@ fn main() {
 
 <span class="filename">文件名: src/main.rs</span>
 
-```rust,should_panic
+```rust
 use std::fs::File;
 
 fn main() {
@@ -175,7 +170,7 @@ src/libcore/result.rs:906:4
 
 <span class="filename">文件名: src/main.rs</span>
 
-```rust,should_panic
+```rust
 use std::fs::File;
 
 fn main() {

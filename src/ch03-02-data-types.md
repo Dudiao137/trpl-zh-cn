@@ -2,7 +2,6 @@
 
 > [ch03-02-data-types.md](https://github.com/rust-lang/book/blob/master/src/ch03-02-data-types.md)
 > <br>
-> commit a86c1d315789b3ca13b20d50ad5005c62bdd9e37
 
 在 Rust 中，每一个值都属于某一个 **数据类型**（*data type*），这告诉 Rust 它被指定为何种数据，以便明确数据处理方式。我们将看到两类数据类型子集：标量（scalar）和复合（compound）。
 

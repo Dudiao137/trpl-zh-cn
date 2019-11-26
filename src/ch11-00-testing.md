@@ -1,8 +1,7 @@
 # 编写自动化测试
 
 > [ch11-00-testing.md](https://github.com/rust-lang/book/blob/master/src/ch11-00-testing.md)
-> <br>
-> commit 1fedfc4b96c2017f64ecfcf41a0a07e2e815f24f
+<br>
 
 > Program testing can be a very effective way to show the presence of bugs, but it is hopelessly inadequate for showing their absence.
 >
